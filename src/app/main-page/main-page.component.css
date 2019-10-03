@@ -1,0 +1,6 @@
+#button-left {
+    position:absolute;
+    top: 120px;
+    right:60px;
+    border: 1pt solid white
+}

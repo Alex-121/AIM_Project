@@ -1,0 +1,57 @@
+<div class ="container mt-5"> 
+    <form (ngSubmit)="onSubmit()" [formGroup]="detailForm">
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <label for="Title"><h3>Title</h3></label>
+            <input type="text" name= "title" class="form-control" placeholder="Title" formControlName ="Title">
+          </div>
+          <div class="col">
+            <label for="Title"><h3>Topics</h3></label>
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04">
+                <option selected>Choose..</option>
+                <option text="communication">Communcation</option>
+                <option text="collabration">Collabration</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="form-group">
+          <label for="comment"><h3>Description:</h3></label>
+          <textarea class="form-control" rows="5" id="comment" formControlName ="description"></textarea>
+        </div>
+        <button type="submit" style="margin-top:10px;margin-left:5px;" class ="btn btn-lg btn-primary" [routerLink]="['/main']">Submit</button>
+        
+       <!-- <div class="form-group">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h3>
+                        Rating 
+                      </h3>   
+                </div>
+                <div class="card-body">
+                        <div style="text-align:center">
+                                <star-rating value="5" checkedcolor="red" uncheckedcolor="black" size="64px"    readonly="false" (rate)="onRate($event)" id="star"></star-rating>
+                                <a href="#" class="btn btn-primary btn-block" [routerLink]="['/main']" onclick="">Submit</a>
+                                <label class="label" 
+  
+                </div>
+                
+            </div>
+        </div>
+  
+        
+        
+        </div>-->
+        
+  <p>
+    Form Value: {{ detailForm.value | json }}
+  </p>
+  
+    </form>
+  </div>
+    
+  
