@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-# Testing
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
-=======
 # AIMLayout
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
->>>>>>> 0f43bc34ec452cba6cf98accda1281ac8faabc4d
 
 ## Development server
 
