@@ -7,7 +7,7 @@
    <div class="card bg-dark text-white  "  >
         <img class="card-img " src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Atlanta_Downtown_Skyline.jpg/1000px-Atlanta_Downtown_Skyline.jpg" height="150"   alt="Card image">
         <div class="card-img-overlay">
-            <h3 class="bottom-left">AIM IDEAS</h3>
+            <h3 class="bottomleft">AIM IDEAS</h3>
           
                 
         </div>
@@ -26,12 +26,22 @@
                       </div>
               </ul> 
           </div>
+          <div class="card mb-5" id="description-box" >
+            <div class="card-header" >
+              Topic
+            </div>
+            <div class="card-body" >
+              <blockquote class="blockquote mb-0">
+                <p>Topic description</p>
+              </blockquote>
+            </div>
+          </div>
     </div>
     </header>
    
       
     <div class="row d-flex justify-content-center">
-      <div class="col-lg-15 col-md-11">
+      <div class="col-lg-15 col-md-11 mb-5">
           <ul class="nav nav-tabs">
               <li class="nav-item">
                 <a class="nav-link text-secondary" href="#">Recent</a>
@@ -63,92 +73,89 @@
 
     <div class="row d-flex justify-content-center">
 
-        <div class="col-lg-8 col-md-11">
-            <div class="card">
-                <div class="card-header">
-                  Quote
-                </div>
-                <div class="card-body">
-                  <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="card" >
+        <div class="col-lg-8 col-md-11" >
+
+              <div class="card" id="infor-box" >
                   <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title">topics</h5>
+                    <p class="card-text">informations</p>
                     
                   </div>
                 </div>
                 
-                <div class="card" >
+                <div class="card" id="infor-box" >
                   <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title">topics</h5>
+                    <p class="card-text">information</p>
                     
                   </div>
                 </div>
                 
-                <div class="card">
+                <div class="card" id="infor-box">
                   <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title">topics</h5>
+                    <p class="card-text">information</p>
                     
                   </div>
                 </div>
         </div>
 
-            <div class="list-group col-lg-3 col-md-4" id="search-group">
+            <div class="list-group col-lg-3 col-md-4 " id="search-group">
                 
-                <form class="form-inline" [formGroup]="myForm" (ngSubmit)="update()" >
+                <form class="form-inline mb-5" [formGroup]="myForm" (ngSubmit)="update()" >
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchbar">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
                   </form>
               
             
                   <div class="accordion" id="accordionExample">
-                      <div class="card">
+                      <div class="card mb-5">
                         <div class="card-header" id="headingOne">
                           <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Collapsible Group Item #1
+                              Active Campaigns
                             </button>
                           </h2>
                         </div>
                     
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                           <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            
+                              <a href="#" class="list-group-item list-group-item-action active btn-dark">
+                                UI Design
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">Database Schema</a>
+                              <a href="#" class="list-group-item list-group-item-action">API</a>
+                        
+                            
                           </div>
                         </div>
                       </div>
-                      <div class="card">
+                      <div class="card mb-5">
                         <div class="card-header" id="headingTwo">
                           <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Collapsible Group Item #2
+                              Actived Campaigns
                             </button>
                           </h2>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                           <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                           topics
                           </div>
                         </div>
                       </div>
                       <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header " id="headingThree">
                           <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Collapsible Group Item #3
+                            <button class="btn btn-link collapsed " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                               Leaderboard
                             </button>
                           </h2>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                           <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                           topics
                           </div>
                         </div>
                       </div>
