@@ -1,0 +1,31 @@
+
+#button-left {
+    position:absolute;
+    top: 120px;
+    right:60px;
+    border: 1pt solid white;
+}
+.list-group {
+    padding-left: 15px;
+    padding-bottom: 15px
+}
+#searchbar  {
+    width: 81.5%;
+  
+}
+#search-group{
+    margin-bottom: 15px;
+}
+#description-box{
+    height: 250px;
+    
+}
+#infor-box{
+    height: 500px;  
+}
+.bottomleft{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    
+}

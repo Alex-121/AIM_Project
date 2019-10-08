@@ -9,13 +9,15 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { appRoutes } from './Routes';
+import { IdeasPageComponent } from './ideas-page/ideas-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     NewIdeaComponent,
-    NavbarComponent
+    NavbarComponent,
+    IdeasPageComponent
   ],
   imports: [
     BrowserModule,
