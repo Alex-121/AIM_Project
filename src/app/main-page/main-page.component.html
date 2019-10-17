@@ -78,36 +78,22 @@
                     </ul>
               </div>
 
-
+              <div *ngFor="let idea of ideas">
               <div class="card" id="infor-box" >
                   <div class="card-body">
-                    <h5 class="card-title">topics</h5>
-                    <p class="card-text">informations</p>
+                    <h5 class="card-title"><a [routerLink] = "['/ideas-page','']" href='#/ideas-page/' (click) ="test()">{{idea.title}}</a></h5>
+                    <p class="card-text">{{idea.descript}}</p>
                     
                   </div>
                 </div>
                 
-                <div class="card" id="infor-box" >
-                  <div class="card-body">
-                    <h5 class="card-title">topics</h5>
-                    <p class="card-text">information</p>
-                    
-                  </div>
-                </div>
-                
-                <div class="card" id="infor-box">
-                  <div class="card-body">
-                    <h5 class="card-title">topics</h5>
-                    <p class="card-text">information</p>
-                    
-                  </div>
-                </div>
+              </div>
         </div>
 
             <div class="list-group col-lg-3 col-md-4 " id="search-group">
                 
                 <form class="form-inline mb-5" [formGroup]="myForm" (ngSubmit)="update()" >
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchbar">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchbar" formControlName = 'search'>
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
                   </form>
               

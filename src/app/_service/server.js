@@ -1,28 +1,19 @@
-// const express = require('express');
-// const routes = require('./routes/api');
-// const bodyParser = require('body-parser');
-// const mysql = require('mysql');
+const express = require('express')
+const routes = require('../api/routes/api');
+const bodyParser = require('body-parser');
 
-// const db = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '1234',
-//     database: 'aim'
-// });
+const app = express();
 
-// db.connect((err) =>{
-//     if(err) {
-//         throw(err)
-//     }
-//     console.log("DB connnected")
-// });
+app.use(function(req,res,next) {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Headers","Origin,X-Requested-With, Content-Type,Accept");
+    next();
+})
+app.use(bodyParser.json());
 
-// const app = express();
+app.use('/api/',routes);
 
-// app.use(bodyParser.json());
-// //routes
-// app.use('/api/',routes);
+app.listen(process.env.port || 3000, (req,res) =>{
 
-// app.listen(process.env.port || 3000, (req,res) =>{
-// console.log("now listening to port");
-// });
+console.log("now listening to port");
+});

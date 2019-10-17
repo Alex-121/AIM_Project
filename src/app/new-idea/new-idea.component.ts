@@ -12,13 +12,12 @@ export class NewIdeaComponent implements OnInit {
     Title: new FormControl('Title'),
     Topics: new FormControl('Topics'),
     Description: new FormControl('Description')
-    
   });
   constructor() { }
 
   ngOnInit() {
   }
   onSubmit() {
-    console.log(this.detailForm.value)
+    console.log(this.detailForm.value);
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { IdeasService } from '../_service/ideas.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-main-page',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
-  constructor() { }
+  myForm = new FormGroup({
+    search: new FormControl('search')
+  });
+  ideas = [];
+  constructor(
+    private ideasService: IdeasService
+  ) { }
 
   ngOnInit() {
+    this.ideasService.getIdeas().subscribe((data: any[]) => {
+      console.log(data);
+      this.ideas = data;
+    });
   }
-
+ click() {
+   
+ }
 }
