@@ -1,4 +1,6 @@
-
+#image{
+    object-fit: cover;
+}
 #button-left {
     position:absolute;
     top: 120px;
