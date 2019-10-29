@@ -1,4 +1,7 @@
 
+#image{
+    object-fit: cover;
+}
 #button-left {
     position:absolute;
     top: 120px;
@@ -28,4 +31,7 @@
     bottom: 8px;
     left: 16px;
     
+}
+#navwidth{
+   height: 60px;
 }
