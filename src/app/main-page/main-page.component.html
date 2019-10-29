@@ -61,13 +61,7 @@
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link active  dropdown-toggle text-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Popular</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Recent</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
+                       
                       </li>
                       <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">Hot</a>
@@ -80,9 +74,12 @@
 
               <div *ngFor="let idea of ideas">
               <div class="card" id="infor-box" >
-                  <div class="card-body">
-                    <h5 class="card-title"><a [routerLink] = "['/ideas-page','']" href='#/ideas-page/' (click) ="test()">{{idea.title}}</a></h5>
-                    <p class="card-text">{{idea.descript}}</p>
+                <div class="card-header btn-light"id = "navwidth">
+                <h4 class="card-title  ">{{idea.topic}}</h4>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><a [routerLink] = "['/ideas-page','']" href='#/ideas-page/' (click) ="test()">{{idea.title}}</a></h5>
+                  <p class="card-text">{{idea.descript}}</p>
                     
                   </div>
                 </div>
