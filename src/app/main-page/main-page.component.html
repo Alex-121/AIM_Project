@@ -78,10 +78,10 @@
                     </ul>
               </div>
 
-              <div *ngFor="let idea of ideas">
-              <div class="card" id="infor-box" >
+              <div *ngFor="let idea of ideas; index as  idea_id; let i = index;">
+              <div class="card" id="infor-box" > 
                   <div class="card-body">
-                    <h5 class="card-title"><a [routerLink] = "['/ideas-page','']" href='#/ideas-page/' (click) ="test()">{{idea.title}}</a></h5>
+                    <h5 class="card-title"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}</a></h5>
                     <p class="card-text">{{idea.descript}}</p>
                     
                   </div>

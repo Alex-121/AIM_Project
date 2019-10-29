@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class IdeasService {
-
+  id = 0;
 
 constructor(
 private http: HttpClient,
@@ -16,6 +16,14 @@ private http: HttpClient,
 
 getIdeas() {
  return this.http.get('http://localhost:3000/api/main-page');
- 
+}
+getAnIdea() {
+  return this.http.get('http://localhost:3000/api/ideas-page/' + this.id );
+}
+addIdea(description: Descriptions) {
+  return this.http.post('http://localhost:3000/api/new-idea', description);
+}
+idea_id(data: any) {
+this.id = data;
 }
 }

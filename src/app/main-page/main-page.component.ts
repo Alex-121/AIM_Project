@@ -23,7 +23,8 @@ export class MainPageComponent implements OnInit {
       this.ideas = data;
     });
   }
- click() {
-   
+ test(id: any) {
+  //console.log(id);
+  this.ideasService.idea_id(id);
  }
 }

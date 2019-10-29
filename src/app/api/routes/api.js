@@ -17,15 +17,33 @@ catch(e) {
 
 
 });
+router.get('/ideas-page/:idea_id', async (req,res)=>{
+    //console.log(req.params.idea_id)
+    try {
+        let results = await db.getAnIdea(req, res);
+        res.json(results);
+      
+    }
+    catch(e) {
+        console.log(e);
+        res.sendStatus(500);
+    }
+   
+    
+    });
 
 //add idea to database
-router.post('/new-idea',(req,res)=>{
-
-    console.log(req.body)
-    res.send({
-        type:'POST',
-        name: req.body.name,
-        rank: req.body.rank});
+router.post('/new-idea', async(req,res)=>{
+    console.log('to MYSQL!!')
+    try {
+        let results = await db.post(req,res)
+    }catch(e) {
+        console.log(e)
+    }
+    // res.send({
+    //     type:'POST',
+    //     name: req.body.name,
+    //     rank: req.body.rank});
     
 });
 

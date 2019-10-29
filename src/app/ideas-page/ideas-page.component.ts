@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IdeasService } from '../_service/ideas.service';
 
 @Component({
   selector: 'app-ideas-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IdeasPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ideasService: IdeasService) { }
 
   ngOnInit() {
-  }
 
+    this.ideasService.getAnIdea().subscribe((data: any[]) => {
+      console.log(data);
+  });
+}
 }

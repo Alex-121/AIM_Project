@@ -7,5 +7,5 @@ export const appRoutes: Routes = [
     {path: '', redirectTo: 'main', pathMatch: 'full'},
     {path: 'main', component: MainPageComponent },
     {path: 'new-idea', component: NewIdeaComponent },
-    {path: 'ideas-page', component: IdeasPageComponent}
+    {path: 'ideas-page/:idea_id', component: IdeasPageComponent}
 ];
