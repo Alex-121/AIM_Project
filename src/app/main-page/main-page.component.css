@@ -35,3 +35,7 @@
 #navwidth{
    height: 60px;
 }
+#starimage{
+    mix-blend-mode: multiply;
+    float: right;
+}
