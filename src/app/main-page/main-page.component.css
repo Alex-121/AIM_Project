@@ -24,7 +24,7 @@
     
 }
 #infor-box{
-    height: 500px;  
+    height: 250px;  
 }
 .bottomleft{
     position: absolute;
@@ -34,4 +34,16 @@
 }
 #navwidth{
    height: 60px;
+}
+#starimage{
+    mix-blend-mode: multiply;
+    float: right;
+    pointer-events: none; 
+    cursor: default;
+    display: inline-block; 
+   
+    
+}
+#star{
+    position:relative; top:-3px;
 }
