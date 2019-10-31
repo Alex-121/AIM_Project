@@ -32,8 +32,8 @@ router.get('/ideas-page/:idea_id', async (req,res)=>{
     
     });
 //edit idea that's in the database
-router.put('/ideas-page/:idea_id', async (req,res)=>{
-
+router.put('/ideas-page/:idea_id', (req,res)=>{
+console.log(req)
      try{
          let results = db.put(req, res)
          res.json(results);

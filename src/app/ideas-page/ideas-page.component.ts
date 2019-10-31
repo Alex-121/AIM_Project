@@ -21,10 +21,11 @@ export class IdeasPageComponent implements OnInit {
   });
 }
   onRate($event: {oldValue: number, newValue: number, starRating: StarRatingComponent}) {
-    console.log($event.newValue);
-    this.idea.rating = this.idea.rating + $event.newValue;
+  //  console.log($event.newValue);
+    this.idea[0].rating = this.idea[0].rating + $event.newValue;
+
     this.ideasService.updateRating(this.idea).subscribe((data: any) => {
-      console.log(data);
+      
     });
   }
 

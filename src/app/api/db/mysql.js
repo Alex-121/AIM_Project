@@ -53,18 +53,18 @@ ideadb.post = (req,res) =>{
 }
 
 ideadb.put =  (req,res) => {
-    console.log(req.body)
-    // return new Promise((resolve, reject)=> {
-    //     let idea = req.body;
-    //     let query = "SET @idea_id = ?; SET @date = ?;SET @title = ?; SET @topic =?; SET @descript = ?;SET @rating = ?; CALL CreateOrEdit(@idea_id, @date,@title,@topic,@descript,@rating);";
+   console.log(req.body)
+    return new Promise((resolve, reject)=> {
+        let idea = req.body;
+        let query = "SET @idea_id = ?; SET @date = ?;SET @title = ?; SET @topic =?; SET @descript = ?;SET @rating = ?; CALL CreateOrEdit(@idea_id, @date,@title,@topic,@descript,@rating);";
 
-    //     pool.query(query,[idea.idea_id, new Date().toLocaleDateString(), idea.Title, 1, idea.Description, idea.rating], (err, results) => {
-    //         if(err)
-    //             return reject(err);
-    //         console.log(idea.rating)
-    //         return resolve(results);
-    //     })
+        pool.query(query,[idea.idea_id, idea.date, idea.Title, 1, idea.Description, idea.rating], (err, results) => {
+            if(err)
+                return reject(err);
+            console.log(idea.rating)
+            return resolve(results);
+        })
 
-    // })
+    })
 }
 module.exports = ideadb;
