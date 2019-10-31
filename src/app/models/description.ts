@@ -7,11 +7,8 @@ export class Descriptions {
    private _rating: string;
    private _date: string;
 
-    constructor(title: string, topics: string, description: string, rating: string, date: Date,) {
-        this._title = title;
-        this._topics = topics;
-        this._description = description;
-        this._rating = rating;
+    constructor() {
+
         this._date = new Date().toLocaleDateString('en-US');
     }
 

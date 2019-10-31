@@ -73,12 +73,13 @@
               </div>
 
               <div *ngFor="let idea of ideas; index as  idea_id; let i = index;">
-              <div class="card" id="infor-box" > 
-                  <div class="card-body">
+              <div class="card mb-5" id="infor-box" > 
+                  <div class="card-header">
                     <h5 class="card-title"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}</a></h5>
-                    <p class="card-text">{{idea.descript}}</p>
-                    
                   </div>
+                  <div class="card-body">
+                      <p class="card-text">{{idea.descript}}</p>
+                      </div>
                 </div>
                 
               </div>

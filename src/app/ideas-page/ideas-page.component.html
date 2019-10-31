@@ -62,15 +62,16 @@
         
                             
                               </nav>
-                            
+                      <div *ngFor="let idea of idea">
                       <div class="card" id="infor-box" >
                           <div class ="card-header">
-                              <h4 class="card-title">Topics</h4>
+                              <h4 class="card-title">{{idea.title}}</h4>
                           </div>
                           <div class="card-body">
-                            <p class="card-text">informations</p>
+                            <p class="card-text">{{idea.descript}}</p>
                           </div>
                         </div>
+                      </div>
                       <div class="form-group">
                         <div class="card mt-5">
                            

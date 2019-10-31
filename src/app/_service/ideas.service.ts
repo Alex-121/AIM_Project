@@ -26,4 +26,7 @@ addIdea(description: Descriptions) {
 idea_id(data: any) {
 this.id = data;
 }
+updateRating(data: any) {
+  return this.http.put('http://localhost:3000/api/ideas-page/' + this.id, data);
+}
 }

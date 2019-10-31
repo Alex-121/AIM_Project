@@ -31,25 +31,28 @@ router.get('/ideas-page/:idea_id', async (req,res)=>{
    
     
     });
+//edit idea that's in the database
+router.put('/ideas-page/:idea_id', async (req,res)=>{
+
+     try{
+         let results = db.put(req, res)
+         res.json(results);
+        
+     }catch(e) {
+         console(e)
+     }
+});
 
 //add idea to database
 router.post('/new-idea', async(req,res)=>{
-    console.log('to MYSQL!!')
     try {
         let results = await db.post(req,res)
     }catch(e) {
         console.log(e)
     }
-    // res.send({
-    //     type:'POST',
-    //     name: req.body.name,
-    //     rank: req.body.rank});
+
     
 });
 
-//edit idea that's in the database
-router.put('/new-idea/:id',(req,res)=>{
-    res.send({type:'PUT'});
-    
-});
+
 module.exports = router;
