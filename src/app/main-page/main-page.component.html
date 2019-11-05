@@ -60,7 +60,10 @@
                         <a class="nav-link text-secondary" href="#">Recent</a>
                       </li>
                       <li class="nav-item dropdown">
-                        <a class="nav-link active  dropdown-toggle text-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Popular</a>
+                        <a class="nav-link active text-primary"  href="#" role="button" >Popular <i class="arrow down"></i></a>
+                        
+
+            
                        
                       </li>
                       <li class="nav-item">
@@ -94,7 +97,7 @@
             <div class="list-group col-lg-3 col-md-4 " id="search-group">
                 
                 <form class="form-inline mb-5" [formGroup]="myForm" (ngSubmit)="update()" >
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchbar" formControlName = 'search'>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="searchbar" autocomplete ="off" onkeyup="searchFunction()" formControlName = 'search'>
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
                   </form>
               
