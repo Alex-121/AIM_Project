@@ -4,8 +4,8 @@ const mysql = require('mysql');
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    password: 'Xu1100354741!',
-    user:'shuning',
+    password: '1234',
+    user:'root',
     database: 'aim',
     host: 'localhost',
     port: '3306',
@@ -14,9 +14,19 @@ const pool = mysql.createPool({
 
 let ideadb ={};
 
-ideadb.get = () => {
+ideadb.getOrderDesc = () => {
     return new Promise((resolve, reject) => {
-        pool.query(`Select * from collab_ideas`, (err, results) => {
+        pool.query(`call LoadOrdered_DESC()`, (err, results) => {
+            if(err) {
+                return reject(err);
+            }
+            return resolve(results);
+        });
+    });
+};
+ideadb.getOrderAsc = () => {
+    return new Promise((resolve, reject) => {
+        pool.query(`call LoadOrdered_ASC()`, (err, results) => {
             if(err) {
                 return reject(err);
             }

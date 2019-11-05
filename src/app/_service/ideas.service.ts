@@ -12,10 +12,13 @@ export class IdeasService {
 
 constructor(
 private http: HttpClient,
-) { console.log('IdeaSerive works!!')}
+) { console.log('IdeaSerive works!!'); }
 
 getIdeas() {
  return this.http.get('http://localhost:3000/api/main-page');
+}
+getIdeasOrdered() {
+  return this.http.get('http://localhost:3000/api/main-page-sorted');
 }
 getAnIdea() {
   return this.http.get('http://localhost:3000/api/ideas-page/' + this.id );
@@ -27,7 +30,7 @@ idea_id(data: any) {
 this.id = data;
 }
 updateRating(data: any) {
-  let obj = data[0]
+  const obj = data[0];
   return this.http.put('http://localhost:3000/api/ideas-page/' + this.id, obj);
 }
 }

@@ -12,6 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { appRoutes } from './Routes';
 import { IdeasPageComponent } from './ideas-page/ideas-page.component';
 import { from } from 'rxjs';
+import { MainPageSortedComponent } from './main-page-sorted/main-page-sorted.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { from } from 'rxjs';
     MainPageComponent,
     NewIdeaComponent,
     NavbarComponent,
-    IdeasPageComponent
+    IdeasPageComponent,
+    MainPageSortedComponent,
+
   ],
   imports: [
     BrowserModule,

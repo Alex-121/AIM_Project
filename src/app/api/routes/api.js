@@ -5,18 +5,31 @@ const router = express.Router();
 
 //get the ideas from the database
 router.get('/main-page', async (req,res)=>{
-    
-try {
-    let results = await db.get();
-    res.json(results);
-}
-catch(e) {
-    console.log(e);
-    res.sendStatus(500);
-}
 
+        try {
+            let results = await db.getOrderDesc();
+            res.json(results);
+        }
+        catch(e) {
+            console.log(e);
+            res.sendStatus(500);
+        }  
 
 });
+
+router.get('/main-page-sorted', async (req,res)=>{
+
+    try {
+        let results = await db.getOrderAsc();
+        res.json(results);
+    }
+    catch(e) {
+        console.log(e);
+        res.sendStatus(500);
+    }
+
+});
+
 router.get('/ideas-page/:idea_id', async (req,res)=>{
     //console.log(req.params.idea_id)
     try {

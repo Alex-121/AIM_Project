@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { IdeasService } from '../_service/ideas.service';
-import { Descriptions} from '../models/description';
+import {Router, RouterLink} from '@angular/router';
 import { from } from 'rxjs';
 
 @Component({
@@ -17,7 +17,9 @@ export class NewIdeaComponent implements OnInit {
     Description: new FormControl('Description')
   });
   constructor(
-    private ideasService: IdeasService) { }
+    private ideasService: IdeasService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
   }
@@ -28,5 +30,6 @@ export class NewIdeaComponent implements OnInit {
     this.ideasService.addIdea(this.detailForm.value).subscribe((data: any) => {
       console.log(data);
     });
+    this.router.navigateByUrl('/main');
   }
 }
