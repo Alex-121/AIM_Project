@@ -8,6 +8,11 @@
     right:60px;
     border: 1pt solid white;
 }
+.nav-text {
+position: relative;
+float: right;
+}
+
 .list-group {
     padding-left: 15px;
     padding-bottom: 15px
@@ -24,7 +29,7 @@
     
 }
 #infor-box{
-    height: 250px;  
+    height: 100px;  
 }
 .bottomleft{
     position: absolute;
