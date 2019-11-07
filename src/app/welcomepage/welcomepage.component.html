@@ -1,0 +1,127 @@
+<body class="bg-light">
+    <div class="container-fluid" >
+    
+    
+      <header class="row d-flex justify-content-center">
+        <div class="col-lg-11">
+       <div class="card bg-dark text-white  "  >
+            <img class="card-img" id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Atlanta_Downtown_Skyline.jpg/1000px-Atlanta_Downtown_Skyline.jpg" height="150"   alt="Card image">
+            <div class="card-img-overlay">
+                <h3 class="card-text">AIM IDEAS</h3>
+              
+                    
+            </div>
+          </div>
+          <div class="card-footer mx-auto mb-5">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active bg-dark text-white font-weight-bold" href="#">WELCOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-dark font-weight-bold " [routerLink] = "['/main']">IDEAS</a>
+                    </li>
+                   
+                    <div class="">
+                            <button type="button" class="btn btn-dark btn-lg" [routerLink] = "['/new-idea']" id="button-left"><h5>Submit New Idea</h5></button>
+                          </div>
+                  </ul> 
+              </div>
+        </div>
+        </header>
+       
+          
+        <div class="row d-flex justify-content-center">
+            
+                
+            </div>
+    
+            
+       
+    
+        <div class="row d-flex justify-content-center">
+    
+            <div class="col-lg-8 col-md-11" >
+    
+                <div class="card mb-5" id="description-box" >
+                    <div class="card-header" >
+                      AIM Ideas
+                    </div>
+                    <div class="card-body" >
+                      <blockquote class="blockquote mb-0">
+                        <p>Hello! <br> Do you have a new idea you would like the team to consider? Submit your ideas and vote.</p>
+                      </blockquote>
+                    </div>
+                  </div>
+
+    
+
+            </div>
+    
+                <div class="list-group col-lg-3 col-md-4 " id="search-group">
+                    
+                    <form class="form-inline mb-5" [formGroup]="myForm" (ngSubmit)="update()" >
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="searchbar" autocomplete ="off" onkeyup="searchFunction()" formControlName = 'search'>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+                      </form>
+                  
+                
+                      <div class="accordion" id="accordionExample">
+                          <div class="card mb-5">
+                            <div class="card-header" id="headingOne">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Active Campaigns
+                                </button>
+                              </h2>
+                            </div>
+                        
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                              <div class="card-body">
+                                
+                                  <a href="#" class="list-group-item list-group-item-action active btn-dark">
+                                    UI Design
+                                  </a>
+                                  <a href="#" class="list-group-item list-group-item-action">Database Schema</a>
+                                  <a href="#" class="list-group-item list-group-item-action">API</a>
+                            
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-5">
+                            <div class="card-header" id="headingTwo">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Actived Campaigns
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                              <div class="card-body">
+                               topics
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header " id="headingThree">
+                              <h2 class="mb-0">
+                                <button class="btn btn-link collapsed " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                   Leaderboard
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                              <div class="card-body">
+                               topics
+                              </div>
+                            </div>
+                          </div>
+                        </div>            
+                      
+            </div>    
+           
+        </div>
+    
+    </div>
+    </body>
+    

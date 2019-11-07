@@ -13,6 +13,7 @@ import { appRoutes } from './Routes';
 import { IdeasPageComponent } from './ideas-page/ideas-page.component';
 import { from } from 'rxjs';
 import { MainPageSortedComponent } from './main-page-sorted/main-page-sorted.component';
+import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MainPageSortedComponent } from './main-page-sorted/main-page-sorted.com
     NavbarComponent,
     IdeasPageComponent,
     MainPageSortedComponent,
+    WelcomepageComponent,
 
   ],
   imports: [
