@@ -3,16 +3,21 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { IdeasService } from '../_service/ideas.service';
 import { Router } from '@angular/router';
 import { from } from 'rxjs';
+import { Descriptions } from '../models/description';
+
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
+  ideas = [];
+  pageOfItems: Array<any>;
+  
   myForm = new FormGroup({
     search: new FormControl('search')
   });
-  ideas = [];
   constructor(
     private ideasService: IdeasService,
     private router: Router
@@ -22,6 +27,7 @@ export class MainPageComponent implements OnInit {
     this.ideasService.getIdeas().subscribe((data: any[]) => {
       console.log(data);
       this.ideas = data[0];
+      this.pageOfItems = data;
     });
   }
  test(id: any) {
@@ -46,5 +52,8 @@ order() {
 //    }
 //  }console.log(match);
 //   this.url = 'http://localhost:4200/#/ideas-page' + match.idea_id;
+ }
+ onChangePage(pageOfItems: Array<any>) {
+   this.pageOfItems = pageOfItems;
  }
 }

@@ -15,10 +15,10 @@
       <div class="card-footer mx-auto mb-5">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link text-dark font-weight-bold " [routerLink] = "['/welcome']">WELCOME</a>
+                  <a class="nav-link active bg-dark text-white font-weight-bold" href="#">WELCOME</a>
                 </li>
                 <li class="nav-item">
-                  <a class= "nav-link active bg-dark text-white font-weight-bold" [routerLink] = "['/main']">IDEAS</a>
+                  <a class="nav-link text-dark font-weight-bold " href="#">IDEAS</a>
                 </li>
                
                 <div class="">
@@ -69,8 +69,9 @@
                     </ul>
               </div>
 
-              <div *ngFor="let idea of ideas; index as  idea_id; let i = index;">
-               <div class="list-group" id="infor-box" > 
+              <div *ngFor="let idea of pageOfItems; index as  idea_id; let i = index;">
+               <div class="list-group" id="infor-box" >
+    
                   <div class="list-group-item"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}
                     <a class="nav-text" >
                         Total Rating:  {{idea.rating}}
@@ -84,7 +85,9 @@
                   
                       </div>
                 </div>
-              
+                <jw-pagination [items]="ideas" (changePage)="onChangePage($event)">
+                    
+                  </jw-pagination> 
 
         </div>
 
