@@ -66,3 +66,7 @@ i {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
+  .pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+  }

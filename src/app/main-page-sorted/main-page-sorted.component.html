@@ -71,7 +71,7 @@
                         </ul>
                   </div>
     
-                  <div *ngFor="let idea of ideas; index as  idea_id; let i = index;">
+                  <div *ngFor="let idea of pageOfItems; index as  idea_id; let i = index;">
                       <div class="list-group" id="infor-box" > 
                          <div class="list-group-item"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}
                            <a class="nav-text" >
@@ -86,7 +86,7 @@
                          
                              </div>
                        </div>
-                     
+                       <jw-pagination [items]="ideas" (changePage)="onChangePage($event)"></jw-pagination> 
        
                </div>
        

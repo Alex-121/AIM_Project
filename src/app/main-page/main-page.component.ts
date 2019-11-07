@@ -27,7 +27,7 @@ export class MainPageComponent implements OnInit {
     this.ideasService.getIdeas().subscribe((data: any[]) => {
       console.log(data);
       this.ideas = data[0];
-      this.pageOfItems = data;
+      this.pageOfItems = data[0];
     });
   }
  test(id: any) {

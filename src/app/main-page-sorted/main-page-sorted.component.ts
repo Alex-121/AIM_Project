@@ -13,6 +13,7 @@ export class MainPageSortedComponent implements OnInit {
     search: new FormControl('search')
   });
   ideas = [];
+  pageOfItems: Array<any>;
   constructor(
     private ideasService: IdeasService,
     private router:Router
@@ -22,6 +23,7 @@ export class MainPageSortedComponent implements OnInit {
     this.ideasService.getIdeasOrdered().subscribe((data: any[]) => {
       console.log(data);
       this.ideas = data[0];
+      this.pageOfItems = data[0];
     });
   }
  test(id: any) {
@@ -48,4 +50,7 @@ export class MainPageSortedComponent implements OnInit {
 //  }console.log(match);
 //   this.url = 'http://localhost:4200/#/ideas-page' + match.idea_id;
  }
+ onChangePage(pageOfItems: Array<any>) {
+  this.pageOfItems = pageOfItems;
+}
 }
