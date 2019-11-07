@@ -74,24 +74,24 @@
                   </div>
     
                   <div *ngFor="let idea of ideas; index as  idea_id; let i = index;">
-                  <div class="card mb-5" id="infor-box" > 
-                      <div class="card-header">
-                        <h5 class="card-title"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}
-                          <a class="nav-image" id ="starimage">
-                            <img src="data:image/png;base64,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" width="30" height="30" alt="" id="star" > {{idea.rating}}
-                          </a>
-                          </a>
-                      </h5>
+                      <div class="list-group" id="infor-box" > 
+                         <div class="list-group-item"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}
+                           <a class="nav-text" >
+                               Total Rating:  {{idea.rating}}
+                             </a>
+                           
+                             </a>
                          
-                      </div>
-                      <div class="card-body">
-                          <p class="card-text">{{idea.descript}}</p>
-                          </div>
-                    </div>
-                    
-                  </div>
-            </div>
-    
+                             <p class="card-text disabled-link text-dark">{{idea.descript}}</p>
+                         </div>
+                         
+                         
+                             </div>
+                       </div>
+                     
+       
+               </div>
+       
                 <div class="list-group col-lg-3 col-md-4 " id="search-group">
                     
                     <form class="form-inline mb-5" [formGroup]="myForm" (ngSubmit)="update()" >
