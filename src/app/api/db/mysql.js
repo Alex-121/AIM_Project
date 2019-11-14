@@ -4,7 +4,7 @@ const mysql = require('mysql');
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    password:'1234!',
+    password:'1234',
     user:'root',
     database: 'aim',
     host: 'localhost',
@@ -77,4 +77,5 @@ ideadb.put =  (req,res) => {
 
     })
 }
+
 module.exports = ideadb;

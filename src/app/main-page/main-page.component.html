@@ -15,10 +15,10 @@
       <div class="card-footer mx-auto mb-5">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link active bg-dark text-white font-weight-bold" href="#">WELCOME</a>
+                  <a class="nav-link text-dark font-weight-bold " [routerLink] = "['/welcome']">WELCOME</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark font-weight-bold " href="#">IDEAS</a>
+                  <a class="nav-link active bg-dark text-white font-weight-bold" [routerLink] = "['main']">IDEAS</a>
                 </li>
                
                 <div class="">
@@ -69,7 +69,7 @@
                     </ul>
               </div>
 
-              <div *ngFor="let idea of pageOfItems; index as  idea_id; let i = index;">
+              <div *ngFor="let idea of pageOfItems | ideasFilter: searchTerm; index as  idea_id; let i = index;">
                <div class="list-group" id="infor-box" >
     
                   <div class="list-group-item"><a [routerLink] = "['/ideas-page', idea.idea_id]"  (click) ="test(idea.idea_id)">{{idea.title}}
@@ -93,10 +93,10 @@
 
             <div class="list-group col-lg-3 col-md-4 " id="search-group">
                 
-                <form class="form-inline mb-5" [formGroup]="myForm" (ngSubmit)="update()" >
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="searchbar" autocomplete ="off" onkeyup="searchFunction()" formControlName = 'search'>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
-                  </form>
+                <div class="form-inline mb-5" >
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="searchbar"  autocomplete ="off" [(ngModel)]= "searchTerm"/>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn"(click) ="update()" >Search</button>
+                </div>
               
             
                   <div class="accordion" id="accordionExample">

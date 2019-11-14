@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RatingModule,} from 'ng-starrating';
+import {RatingModule, } from 'ng-starrating';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +16,9 @@ import { from } from 'rxjs';
 import { MainPageSortedComponent } from './main-page-sorted/main-page-sorted.component';
 import { WelcomepageComponent } from './welcomepage/welcomepage.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
+import { IdeaFilter } from './main-page/ideas-filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { IdeaFilter2 } from './main-page-sorted/ideas-filter2.pipe';
 
 
 @NgModule({
@@ -28,6 +31,9 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
     MainPageSortedComponent,
     WelcomepageComponent,
     JwPaginationComponent,
+    IdeaFilter,
+    IdeaFilter2
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,8 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
     RatingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
 
   ],
   providers: [],

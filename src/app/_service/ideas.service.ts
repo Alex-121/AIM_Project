@@ -33,4 +33,5 @@ updateRating(data: any) {
   const obj = data[0];
   return this.http.put('http://localhost:3000/api/ideas-page/' + this.id, obj);
 }
+
 }

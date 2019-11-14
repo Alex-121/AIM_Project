@@ -67,5 +67,4 @@ router.post('/new-idea', async(req,res)=>{
     
 });
 
-
 module.exports = router;
