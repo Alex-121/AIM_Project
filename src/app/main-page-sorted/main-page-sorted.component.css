@@ -24,10 +24,6 @@ float: right;
 #search-group{
     margin-bottom: 15px;
 }
-#description-box{
-    height: 250px;
-    
-}
 #infor-box{
     height: 100px;  
 }
@@ -63,4 +59,15 @@ i {
   .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
+  }
+  #maindescription{
+    width: 50ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+#topicdescription{
+    resize: both;
+    overflow: auto;  
   }

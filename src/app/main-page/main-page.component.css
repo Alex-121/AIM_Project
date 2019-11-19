@@ -24,10 +24,6 @@ float: right;
 #search-group{
     margin-bottom: 15px;
 }
-#description-box{
-    height: 250px;
-    
-}
 #infor-box{
     height: 100px;  
 }
@@ -69,4 +65,15 @@ i {
   .pagination {
     justify-content: center;
     flex-wrap: wrap;
+  }
+  #maindescription{
+      width: 50ch;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+  }
+#topicdescription{
+    resize: both;
+    overflow: auto;  
   }

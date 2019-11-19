@@ -23,7 +23,8 @@
     
 }
 #infor-box{
-    height: 500px;  
+    resize: both;
+    overflow: auto;  
 }
 .bottomleft{
     position: absolute;
